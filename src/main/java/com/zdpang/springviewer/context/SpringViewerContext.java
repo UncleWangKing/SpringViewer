@@ -19,7 +19,6 @@ public class SpringViewerContext implements ApplicationContextAware{
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         for (String name:beanDefinitionNames) {
             Object bean = applicationContext.getBean(name);
-            if(null != bean)
             controllerClassBeans.add(ClassBeanParser.getByanno(bean.getClass()));
         }
     }
